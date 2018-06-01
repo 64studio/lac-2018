@@ -13,10 +13,13 @@ sudo apt install pdk pdk-mediagen
 ## APT Repository key
 
 - Make email apt@your-domain
-- Do not set a passcode
+- Do not set a passphrase
 
 ```bash
 sudo apt install rng-tools
+```
+(ignore service failing to start with "Cannot find a hardware RNG device to use.")
+```
 sudo rngd -r /dev/urandom
 gpg --gen-key
 ```

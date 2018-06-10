@@ -54,3 +54,6 @@ pdk commit -m "A note about my changes"
 ```bash
 make image
 ```
+(This step uses sudo, you will be prompted for your login password).
+
+After some time, you should find the .img file in the tmp/ directory of your PDK workspace. You can install this image to a microSD card using dd (the status=progress option is helpful), or try [bmap-tools](https://packages.debian.org/search?keywords=bmap-tools).

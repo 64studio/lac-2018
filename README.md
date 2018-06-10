@@ -30,21 +30,27 @@ git remote add github https://github.com/pideck/pideck-distro.git
 git pull github master
 pdk channel update
 pdk pull components
+make local
 pdk download pideck.xml
 ```
 
-## Modify APT repo key email address, modify project Makefile, modify postinst script
+## Modify apt-deb.key email address to your own
 
 ```bash
 nano pideck.xml
-nano Makefile
-nano postinst.sh
 ```
 
-## Commit changes and build image
+## Optional - modify project Makefile, modify postinst script
 
 ```bash
-pdk commit -m "A note about my changes"
+nano Makefile
+nano postinst.sh
 make local
+pdk commit -m "A note about my changes"
+```
+
+## Build image
+
+```bash
 make image
 ```

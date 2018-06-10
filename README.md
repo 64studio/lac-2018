@@ -5,7 +5,7 @@
 ```bash
 sudo apt install apt-transport-https
 echo "deb https://apt.64studio.net stretch main" | sudo tee /etc/apt/sources.list.d/64studio.list
-wget -qO - https://apt.64studio.net/public-key.asc | sudo apt-key add -
+wget -qO - https://apt.64studio.net/archive-keyring.asc | sudo apt-key add -
 sudo apt update
 sudo apt install pdk pdk-mediagen
 ```
